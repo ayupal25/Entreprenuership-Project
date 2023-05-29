@@ -7,10 +7,8 @@ $custom4: #9BA4B5;
 $primary:       $custom2;
 $secondary:     $custom1;
 
-$carousel-caption-width:             100%;
 $carousel-caption-color:            $custom1;
-$carousel-caption-padding-y:         1.25rem;
-$carousel-caption-spacer:            1.25rem;
+
 
 
 
@@ -18,15 +16,18 @@ $carousel-caption-spacer:            1.25rem;
 .carousel-item{
     height: 400px;
     width: 100%;
-    font-family: 'Noto Sans', sans-serif;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Pacifico', cursive;
     font-size: x-large;
 } 
 .carousel-item img{
     height: 400px;
     width: 100%;
 }
-
+.carousel-caption {
+    position: absolute;
+    top:40px;
+    font-family: 'Pacifico', cursive;
+ }
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
