@@ -2,14 +2,19 @@
 .carousel-item {
   height: 400px;
   width: 100%;
-  font-family: "Noto Sans", sans-serif;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Pacifico", cursive;
   font-size: x-large;
 }
 
 .carousel-item img {
   height: 400px;
   width: 100%;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 40px;
+  font-family: "Pacifico", cursive;
 }
 
 /*!
@@ -6118,9 +6123,9 @@ textarea.form-control-lg {
 
 .carousel-caption {
   position: absolute;
-  right: 0%;
+  right: 15%;
   bottom: 1.25rem;
-  left: 0%;
+  left: 15%;
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
   color: #F1F6F9;
