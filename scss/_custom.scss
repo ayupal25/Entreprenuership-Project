@@ -1,17 +1,16 @@
-$custom1: #F1F6F9;
-$custom2: #394867;
-$custom3: #212A3E;
-$custom4: #9BA4B5;
+$custom1: #F1DDBF;
+$custom2: #525E75;
+$custom3: #78938A;
+$custom4: #92BA92;
 
 
-$primary:       $custom2;
-$secondary:     $custom1;
+$primary:       $custom1;
+$secondary:     $custom2;
+$info:          $custom3;
+$success:       $custom4;
+
 
 $carousel-caption-color:            $custom1;
-
-
-
-
 
 .carousel-item{
     height: 400px;
@@ -26,7 +25,6 @@ $carousel-caption-color:            $custom1;
 .carousel-caption {
     position: absolute;
     top:40px;
-    font-family: 'Pacifico', cursive;
  }
 
 @import "../node_modules/bootstrap/scss/bootstrap";
