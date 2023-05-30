@@ -5,12 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/brands.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/fontawesome.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/regular.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/solid.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <title>Home</title>
 </head>
 <body class="bg-secondary">
+
     <nav class="navbar navbar-expand-lg bg-primary sticky-top">
         <div class="container-fluid lead">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,24 +24,38 @@
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav text-white">
                   <li class="nav-item p-2">
-                    <a class="nav-link" aria-current="page" href="#">Home</a>
+                    <a class="nav-link" aria-current="page" href="home.html">Home</a>
                   </li>
                   <li class="nav-item p-2">
-                    <a class="nav-link" href="#">Menu</a>
+                    <a class="nav-link" href="#section1">Menu</a>
                   </li>
                   <li class="nav-item p-2">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="#section3">About</a>
                   </li>
                   <li class="nav-item p-2">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="#section4">Contact</a>
                   </li>
                   <li class="nav-item p-2">
-                    <a class="nav-link" href="#">Cart</a>
                   </li>
                 </ul>
+                <button class="btn btn-success btn-lg" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="fa-solid fa-cart-shopping"></i> <span class="badge rounded-pill bg-danger" id="quantity">0</span></button>
             </div>
         </div>
     </nav>
+
+    <div class="offcanvas offcanvas-end bg-secondary text-light" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title display-6" id="offcanvasScrollingLabel">Cart</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul id="cartlist" class="list-group">
+
+          </ul>
+          <h3 class="lead text-white-50 p-1" id="total">Total: ₹0</h3>
+          <button type="button" class="btn btn-success">Proceed to payment</button>
+        </div>
+      </div>
 
     <div class="carousel position-relative shadow">
         <div class="carousel-inner">
@@ -47,10 +66,10 @@
                     <div class="row">
                         <div class="col-4"></div>
                         <div class="col-2">
-                            <button type="button" class="z-0 position-absolute btn btn-primary top-50 btn-lg">Order now</button>
+                            <button type="button" onclick="window.location.href = '#section1' " class="z-0 position-absolute btn btn-primary top-50 btn-lg">Order now</button>
                         </div>
                         <div class="col-2">
-                            <button type="button" class="z-0 position-absolute btn btn-outline-primary top-50 btn-lg">Learn more</button>
+                            <button type="button" onclick="window.location.href = '#section3'" class="z-0 position-absolute btn btn-outline-primary top-50 btn-lg">Learn more</button>
                         </div>
                         <div class="col-4"></div>
                     </div>
@@ -62,10 +81,10 @@
     <div class="conatiner-fluid p-4 shadow bg-info g-2">
         <ul class="nav nav-underline lead justify-content-lg-evenly">
             <li class="nav-item">
-                <a href="#" class="nav-link" >Appetizers</a>
+                <a href="#section1" class="nav-link" >Appetizers</a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link" >Main Course</a>
+                <a href="#section2" class="nav-link" >Main Course</a>
             </li>
             <li class="nav-item">
                 <a href="#" class="nav-link" >Drinks</a>
@@ -77,111 +96,59 @@
     </div>
 
     <div class="container-lg p-3 g-2">
-        <h3 class="display-5 text-center bg-info text-primary rounded-2 g-2">Appetizers</h3>
-        <div class="row row-cols-4 g-2">
-            <div class="col">
-                <div class="card bg-success">
-                    <img src="https://picsum.photos/2000" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title placeholder-glow">
-                            <span class="placeholder col-6"></span>
-                        </h5>
-                        <label for="item1" class="form-label">Quantity</label>
-                        <input type="range" class="form-range" min="0" max="5" id="item1">
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card bg-success">
-                    <img src="https://picsum.photos/2000" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title placeholder-glow">
-                            <span class="placeholder col-6"></span>
-                        </h5>
-                        <label for="item2" class="form-label">Quantity</label>
-                        <input type="range" class="form-range" min="0" max="5" id="item2">
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card bg-success">
-                    <img src="https://picsum.photos/2000" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title placeholder-glow">
-                            <span class="placeholder col-6"></span>
-                        </h5>
-                        <label for="item3" class="form-label">Quantity</label>
-                        <input type="range" class="form-range" min="0" max="5" id="item3">
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card bg-success">
-                    <img src="https://picsum.photos/2000" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title placeholder-glow">
-                            <span class="placeholder col-6"></span>
-                        </h5>
-                        <label for="item4" class="form-label">Quantity</label>
-                        <input type="range" class="form-range" min="0" max="5" id="item4">
-                    </div>
-                </div>
-            </div>
+        <h3 class="display-5 text-center bg-info text-primary rounded-2 g-2" id="section1">Appetizers</h3>
+        <div class="row row-cols-4 g-2" id="apps">
+
         </div>
         <br>
-        <h3 class="display-5 text-center bg-info text-primary rounded-2 g-2">Main Course</h3>
-        <div class="row row-cols-4 g-2">
+        <h3 class="display-5 text-center bg-info text-primary rounded-2 g-2" id="section2">Main Course</h3>
+        <div class="row row-cols-4 g-2" id="mains">
+            
+        </div>
+    </div>
+
+    <div class="container-fluid bg-info text-center p-3 g-2" id="section3">
+        <h1 class="display-4 text-primary">About us</h1>
+        <img src="https://picsum.photos/500/200" class="img-thumbnail" alt="...">
+        <h5 class="p-3 text-primary">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis, voluptate recusandae explicabo repudiandae, ullam magnam sint ex totam voluptas quibusdam dolorem quaerat suscipit inventore iusto eveniet animi, vel sit quas!
+        </5>
+    </div>
+    <br>
+    <div class="container-lg bg-info text-center p-4 rounded-3 g-2" id="section4">
+        <h5 class="display-4 text-primary">Contact us</h5>
+        <div class="row row-cols-4 p-2">
             <div class="col">
-                <div class="card bg-success">
-                    <img src="https://picsum.photos/2000" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title placeholder-glow">
-                            <span class="placeholder col-6"></span>
-                        </h5>
-                        <label for="item5" class="form-label">Quantity</label>
-                        <input type="range" class="form-range" min="0" max="5" id="item5">
-                    </div>
+                <div class="card text-center bg-success">
+                    <i class="fa-solid fa-envelope fa-2xl p-4"></i>
+                    <h5 class="card-title p-1">E-Mail</h5>
+                    <div class="card-body">zionfood@gmail.com</div>
                 </div>
             </div>
             <div class="col">
-                <div class="card bg-success">
-                    <img src="https://picsum.photos/2000" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title placeholder-glow">
-                            <span class="placeholder col-6"></span>
-                        </h5>
-                        <label for="item6" class="form-label">Quantity</label>
-                        <input type="range" class="form-range" min="0" max="5" id="item6">
-                    </div>
+                <div class="card text-center bg-success">
+                    <i class="fa-solid fa-phone fa-2xl p-4"></i>
+                    <h5 class="card-title p-1">Phone</h5>
+                    <div class="card-body">987654321</div>
                 </div>
             </div>
             <div class="col">
-                <div class="card bg-success">
-                    <img src="https://picsum.photos/2000" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title placeholder-glow">
-                            <span class="placeholder col-6"></span>
-                        </h5>
-                        <label for="item7" class="form-label">Quantity</label>
-                        <input type="range" class="form-range" min="0" max="5" id="item7">
-                    </div>
+                <div class="card text-center bg-success">
+                    <i class="fa-solid fa-city fa-2xl p-4"></i>
+                    <h5 class="card-title p-1">Address</h5>
+                    <div class="card-body">Street, Locality, City, Pin</div>
                 </div>
             </div>
             <div class="col">
-                <div class="card bg-success">
-                    <img src="https://picsum.photos/2000" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title placeholder-glow">
-                            <span class="placeholder col-6"></span>
-                        </h5>
-                        <label for="item8" class="form-label">Quantity</label>
-                        <input type="range" class="form-range" min="0" max="5" id="item8">
-                    </div>
+                <div class="card text-center bg-success">
+                    <i class="fa-solid fa-thumbs-up fa-2xl p-4"></i>
+                    <h5 class="card-title p-1">Social</h5>
+                    <div class="card-body">@zionfood</div>
                 </div>
             </div>
         </div>
     </div>
-
+    <br>
     <footer class="container-fluid bg-primary">
         <div class="row g-2 p-3">
             <div class="col-md-3"></div>
@@ -207,5 +174,6 @@
     </footer>
 
     <script type="module" src="js/main.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
