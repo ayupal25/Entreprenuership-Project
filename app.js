@@ -11,49 +11,57 @@ let products = [
         id: 1,
         name: 'PRODUCT NAME 1',
         price: 120,
-        cat: 'app'
+        cat: 'app',
+        pic: 'pic1.jpg'
     },
     {
         id: 2,
         name: 'PRODUCT NAME 2',
         price: 120,
-        cat: 'app'
+        cat: 'app',
+        pic: 'pic2.jpg'
     },
     {
         id: 3,
         name: 'PRODUCT NAME 3',
         price: 220,
-        cat: 'app'
+        cat: 'app',
+        pic: 'pic3.jpg'
     },
     {
         id: 4,
         name: 'PRODUCT NAME 4',
         price: 220,
-        cat: 'app'
+        cat: 'app',
+        pic: 'pic4.jpg'
     },
     {
         id: 5,
         name: 'PRODUCT NAME 5',
         price: 120,
-        cat: 'main'
+        cat: 'main',
+        pic: 'pic5.jpg'
     },
     {
         id: 6,
         name: 'PRODUCT NAME 6',
         price: 120,
-        cat: 'main'
+        cat: 'main',
+        pic: 'pic6.jpg'
     },
     {
         id: 7,
         name: 'PRODUCT NAME 7',
         price: 220,
-        cat: 'main'
+        cat: 'main',
+        pic: 'pic7.jpg'
     },
     {
         id: 8,
         name: 'PRODUCT NAME 8',
         price: 220,
-        cat: 'main'
+        cat: 'main',
+        pic: 'pic3.jpg'
     }
 ]
 
@@ -75,7 +83,7 @@ function initApp(){
         <button type="button" class="btn bg-primary" onclick="addToCard(${key})">Add to cart</button>
         `;
         classDiv.innerHTML = `
-            <img src="https://picsum.photos/2000" class="card-img-top" alt="...">
+            <img src="pictures/${value.pic}" class="card-img-top" alt="...">
         `;
         classDiv.appendChild(cbDiv);
         colDiv.appendChild(classDiv);
