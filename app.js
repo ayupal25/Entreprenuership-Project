@@ -80,7 +80,6 @@ function initApp(){
         <h6 class="card-body lead">
             ₹${value.price}
         </h6>
-        <button type="button" class="btn bg-primary" onclick="addToCard(${key})">Add to cart</button>
         `;
         classDiv.innerHTML = `
             <img src="pictures/${value.pic}" class="card-img-top" alt="...">
@@ -104,6 +103,7 @@ function addToCard(key){
     if(listCards[key] == null){
         listCards[key] = JSON.parse(JSON.stringify(products[key]));
         listCards[key].quantity = 1;
+        sessionStorage.setItem("cart",listCards);
     }
     reloadCard();
 }
@@ -141,4 +141,28 @@ function changeQuantity(key, quantity){
     }
     reloadCard();
 }
-
+function gatewayCard(){
+    let listCards1 = sessionStorage.getItem("cart"); 
+    cartitems1.innerHTML = '';
+    let count = 0;
+    let totalPrice = 0;
+    listCards1.forEach((value, key)=>{
+        totalPrice = totalPrice + value.price;
+        count = count + value.quantity;
+        if(value != null){
+            let liDiv = document.createElement('li');
+            liDiv.classList.add('list-group-item','bg-success','border-0');
+            liDiv.innerHTML = `
+                <h6>${value.name}</h6>
+                <p class="lead">₹${value.price.toLocaleString()}</p>
+                <div class="btn-group" role="group" aria-label="Basic outlined example">
+                    <button type="button" class="btn btn-outline-dark btn-sm" onclick="changeQuantity(${key}, ${value.quantity - 1})">-</button>
+                    <button type="button" class="btn btn-outline-dark disabled">${value.quantity}</button>
+                    <button type="button" class="btn btn-outline-dark btn-sm" onclick="changeQuantity(${key}, ${value.quantity + 1})">+</button>
+                </div>`;
+                cartitems1.appendChild(liDiv);
+        }
+    })
+    total1.innerText = "Total: ₹"+totalPrice.toLocaleString();
+    quantity.innerText = count;
+}
