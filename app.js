@@ -9,60 +9,131 @@ let listCards  = [];
 let products = [
     {
         id: 1,
-        name: 'PRODUCT NAME 1',
-        price: 120,
+        name: 'Cream of Vegetable Soup',
+        price: 79,
         cat: 'app',
-        pic: 'pic1.jpg'
+        pic: 'cream.jpg'
     },
     {
         id: 2,
-        name: 'PRODUCT NAME 2',
-        price: 120,
+        name: 'Lemon Chicken Soup',
+        price: 79,
         cat: 'app',
-        pic: 'pic2.jpg'
+        pic: 'soup.jpeg'
     },
     {
         id: 3,
-        name: 'PRODUCT NAME 3',
-        price: 220,
+        name: 'Chicken Clear Soup',
+        price: 89,
         cat: 'app',
-        pic: 'pic3.jpg'
+        pic: 'clear.jpg'
     },
     {
         id: 4,
-        name: 'PRODUCT NAME 4',
-        price: 220,
+        name: 'Mutton Yakhni Soup',
+        price: 99,
         cat: 'app',
-        pic: 'pic4.jpg'
+        pic: 'msoup.jpg'
     },
     {
         id: 5,
-        name: 'PRODUCT NAME 5',
-        price: 120,
+        name: 'Chicken Biryani',
+        price: 170,
         cat: 'main',
-        pic: 'pic5.jpg'
+        pic: 'cbiriyani.jpg'
     },
     {
         id: 6,
-        name: 'PRODUCT NAME 6',
-        price: 120,
+        name: 'Egg Biryani',
+        price: 150,
         cat: 'main',
-        pic: 'pic6.jpg'
+        pic: 'ebiryani.jpeg'
     },
     {
         id: 7,
-        name: 'PRODUCT NAME 7',
-        price: 220,
+        name: 'Biryani Rice',
+        price: 140,
         cat: 'main',
-        pic: 'pic7.jpg'
+        pic: 'biriyanir.jpeg'
     },
     {
         id: 8,
-        name: 'PRODUCT NAME 8',
-        price: 220,
+        name: 'Alfham Chicken',
+        price: 385,
+        cat: 'app',
+        pic: 'achicken.jpeg'
+    },
+    {
+        id: 9,
+        name: 'Grilled Chicken',
+        price: 355,
+        cat: 'app',
+        pic: 'gchicken.jpg'
+    },
+    {
+        id: 10,
+        name: ' Chilli Chicken Dry',
+        price: 430,
+        cat: 'app',
+        pic: 'cchicken.jpeg'
+    },
+    {
+        id: 11,
+        name: 'Mutton Pepper Dry',
+        price: 560,
+        cat: 'app',
+        pic: 'mdry.jpeg'
+    },
+    {
+        id: 12,
+        name: 'Mutton Raan',
+        price: 385,
+        cat: 'app',
+        pic: 'mran.jpeg'
+    },
+    {
+        id: 13,
+        name: 'Chicken Fried Rice',
+        price: 200,
         cat: 'main',
-        pic: 'pic3.jpg'
+        pic: 'cfrice.jpeg'
+    },
+    {
+        id: 14,
+        name: 'Mutton Fried Rice',
+        price: 230,
+        cat: 'main',
+        pic: 'mfrice.jpeg'
+    },
+    {
+        id: 15,
+        name: 'Fish Curry',
+        price: 300,
+        cat: 'main',
+        pic: 'fish.jpeg'
+    },
+    {
+        id: 16,
+        name: 'Prawn Masala',
+        price: 380,
+        cat: 'main',
+        pic: 'prawn.jpeg'
+    },
+    {
+        id: 17,
+        name: 'Fiery Basa Fish Fillet',
+        price: 480,
+        cat: 'main',
+        pic: 'basa.jpeg'
+    },
+    {
+        id: 18,
+        name: 'Hot Chilly Seer Fish Tawa Fry',
+        price: 500,
+        cat: 'main',
+        pic: 'ffry.jpeg'
     }
+    
 ]
 
 function initApp(){
